@@ -1,0 +1,12 @@
+apiVersion: azure.xyzcompany.com/v1
+kind: Anandazureavm
+metadata:
+  labels:
+    app.kubernetes.io/name: anandazureavm
+    app.kubernetes.io/instance: anandazureavm-sample
+    app.kubernetes.io/part-of: vmstate-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vmstate-operator
+  name: anandazureavm-sample
+spec:
+  # TODO(user): Add fields here

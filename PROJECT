@@ -44,4 +44,31 @@ resources:
   kind: AWSManager
   path: github.com/talat-shaheen/vmstate-operator/apis/awsmanager/v1
   version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: azure
+  kind: Anandazureavm
+  path: github.com/talat-shaheen/vmstate-operator/apis/azure/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: gcp
+  kind: Anandgcpgce
+  path: github.com/talat-shaheen/vmstate-operator/apis/gcp/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: aws
+  kind: Anandawsec2
+  path: github.com/talat-shaheen/vmstate-operator/apis/aws/v1
+  version: v1
 version: "3"

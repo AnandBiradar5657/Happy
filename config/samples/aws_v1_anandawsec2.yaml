@@ -1,0 +1,12 @@
+apiVersion: aws.xyzcompany.com/v1
+kind: Anandawsec2
+metadata:
+  labels:
+    app.kubernetes.io/name: anandawsec2
+    app.kubernetes.io/instance: anandawsec2-sample
+    app.kubernetes.io/part-of: vmstate-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vmstate-operator
+  name: anandawsec2-sample
+spec:
+  # TODO(user): Add fields here

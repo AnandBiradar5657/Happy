@@ -4,4 +4,7 @@ resources:
 - gcp_v1_gcpgce.yaml
 - aws_v1_awsec2.yaml
 - awsmanager_v1_awsmanager.yaml
+- azure_v1_anandazureavm.yaml
+- gcp_v1_anandgcpgce.yaml
+- aws_v1_anandawsec2.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples

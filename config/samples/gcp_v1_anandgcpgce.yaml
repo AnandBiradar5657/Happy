@@ -1,0 +1,12 @@
+apiVersion: gcp.xyzcompany.com/v1
+kind: Anandgcpgce
+metadata:
+  labels:
+    app.kubernetes.io/name: anandgcpgce
+    app.kubernetes.io/instance: anandgcpgce-sample
+    app.kubernetes.io/part-of: vmstate-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vmstate-operator
+  name: anandgcpgce-sample
+spec:
+  # TODO(user): Add fields here

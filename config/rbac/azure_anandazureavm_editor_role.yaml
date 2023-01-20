@@ -1,0 +1,31 @@
+# permissions for end users to edit anandazureavms.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: anandazureavm-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: vmstate-operator
+    app.kubernetes.io/part-of: vmstate-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: anandazureavm-editor-role
+rules:
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - anandazureavms
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - anandazureavms/status
+  verbs:
+  - get

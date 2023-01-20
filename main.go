@@ -126,6 +126,27 @@ func main() {
 		setupLog.Error(err, "unable to create controller", "controller", "AWSManager")
 		os.Exit(1)
 	}
+	if err = (&azurecontrollers.AnandazureavmReconciler{
+		Client: mgr.GetClient(),
+		Scheme: mgr.GetScheme(),
+	}).SetupWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create controller", "controller", "Anandazureavm")
+		os.Exit(1)
+	}
+	if err = (&gcpcontrollers.AnandgcpgceReconciler{
+		Client: mgr.GetClient(),
+		Scheme: mgr.GetScheme(),
+	}).SetupWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create controller", "controller", "Anandgcpgce")
+		os.Exit(1)
+	}
+	if err = (&awscontrollers.Anandawsec2Reconciler{
+		Client: mgr.GetClient(),
+		Scheme: mgr.GetScheme(),
+	}).SetupWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create controller", "controller", "Anandawsec2")
+		os.Exit(1)
+	}
 	//+kubebuilder:scaffold:builder
 
 	if err := mgr.AddHealthzCheck("healthz", healthz.Ping); err != nil {
